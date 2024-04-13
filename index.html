@@ -230,35 +230,29 @@
             function nextSlide(){
                 // caption.classList.add('offscreen');
 
-		slides[0].style.right="-100%";
                 slides[0].classList.remove('current');
                 slides[0].classList.add('previous','change');
 
-		slides[1].style.right = "0";
                 slides[1].classList.remove('next');
                 slides[1].classList.add('current');
 		
                 slides[2].classList.add('next');
-		slides[2].style.right="100%";
-		    
-                // let last = slides.length -1;
-		let placeholderSlide = slides.shift();
-		slides.push(placeholderSlide);
-                //slides[last].classList.remove('previous');
+		let last = slides.length -1;
+		slides[last].classList.remove('previous');
                 
                 captions[0].classList.remove('current-caption');
                 captions[0].classList.add('previous-caption','change');
                 captions[1].classList.remove('next-caption');
                 captions[1].classList.add('current-caption');
                 captions[2].classList.add('next-caption');
-                //let last_caption = captions.length -1;
+                let last_caption = captions.length -1;
                 
                 // console.log(last);
-                // captions[last].classList.remove('previous-caption');
+                captions[last].classList.remove('previous-caption');
                 
-                // let placeholder = slides.shift();
+                let placeholder = slides.shift();
                 let captions_placeholder = captions.shift();
-                // slides.push(placeholder); 
+                slides.push(placeholder); 
                 captions.push(captions_placeholder);
             }
             

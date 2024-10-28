@@ -38,6 +38,9 @@ a{
 	font-size: 1.2em;
 	transition: .3s;
 }
+a:visited {
+	color: #fff;
+}
 main{
 	margin: auto;
 	width: 90%;
